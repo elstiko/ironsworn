@@ -22,7 +22,7 @@ nav a {
 }
 .swipeView {
   display: grid;
-  grid-template-columns: repeat(34, 100%);
+  grid-template-columns: repeat(35, 100%);
   will-change: transform;
   align-content: center;
   overflow-x: auto;
