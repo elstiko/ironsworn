@@ -8,17 +8,88 @@
   <meta name="description" content="Convenient Move Reference Cards for the Ironsworn RPG">
 
   <!-- Place favicon.ico in the root directory -->
-
   <link rel="stylesheet" href="css/ironswornMobile.css">
 </head>
 
 <body>
 
-<nav>
-  <a href="#AdventureMoves">Adventure</a> | <a href="#RelationshipMoves">Relationship</a> | <a href="#CombatMoves">Combat</a> | <a href="#SufferMoves">Suffer</a> | <a href="#QuestMoves">Quest</a> | <a href="#FateMoves">Fate</a>
+<header id="nav">
+  <a href="#menu" class="toggle-menu" aria-role="button">MENU</a>
+</header>
+<nav id="menu">
+  <a href="#" class="toggle-menu" icon="close icon" title="close" aria-role="button">X</a>
+  <ul id="topLevel">
+    <li class="lnk-menu adventure" tabindex="1">
+      <div>Adventure</div>
+      <ul>
+        <li><a href="#FaceDanger" class="lnk-menu">Face Danger</a></li>
+        <li><a href="#SecureAnAdvantage" class="lnk-menu">Secure an Advantage</a></li>
+        <li><a href="#GatherInformation" class="lnk-menu">Gather Information</a></li>
+        <li><a href="#Heal" class="lnk-menu">Heal</a></li> 
+        <li><a href="#Resupply" class="lnk-menu">Resupply</a></li>
+        <li><a href="#MakeCamp" class="lnk-menu">Make Camp</a></li>                 
+        <li><a href="#UndertakeAJourney" class="lnk-menu">Undertake a Journey</a></li>
+        <li><a href="#ReachYyourDestination" class="lnk-menu">Reach your Destination</a></li>         
+      </ul>
+    </li>
+    <li class="lnk-menu relationship" tabindex="2">
+      <div>Relationship</div>
+      <ul>
+        <li><a href="#Compel" class="lnk-menu">Compel</a></li>
+        <li><a href="#Sojourn" class="lnk-menu">Sojourn</a></li>
+        <li><a href="#DrawTheCircle" class="lnk-menu">Draw the Circle</a></li>
+        <li><a href="#ForgeABond" class="lnk-menu">Forge a Bond</a></li> 
+        <li><a href="#TestYourBond" class="lnk-menu">Test your Bond</a></li>
+        <li><a href="#AidYourAlly" class="lnk-menu">Aid your Ally</a></li>                 
+        <li><a href="#WriteYourEpilogue" class="lnk-menu">Write your Epilogue</a></li>
+      </ul>
+    </li>    
+    <li class="lnk-menu combat" tabindex="3">
+      <div>Combat</div>
+      <ul>
+        <li><a href="#EnterTheFray" class="lnk-menu">Enter the Fray</a></li>
+        <li><a href="#Strike" class="lnk-menu">Strike</a></li>
+        <li><a href="#Clash" class="lnk-menu">Clash</a></li>
+        <li><a href="#ForgeABond" class="lnk-menu">Forge a Bond</a></li> 
+        <li><a href="#TurnTheTide" class="lnk-menu">Turn the Tide</a></li>
+        <li><a href="#EndTheFight" class="lnk-menu">End the Fight</a></li>                 
+        <li><a href="#Battle" class="lnk-menu">Battle</a></li>
+      </ul>
+    </li> 
+    <li class="lnk-menu suffer" tabindex="4">
+      <div>Suffer</div>
+      <ul>
+        <li><a href="#EndureHarm" class="lnk-menu">Endure Harm</a></li>
+        <li><a href="#FaceDeath" class="lnk-menu">Face Death</a></li>
+        <li><a href="#CompanionEndureHarm" class="lnk-menu">Companion Endure Harm</a></li>
+        <li><a href="#EndureStress" class="lnk-menu">Endure Stress</a></li>
+        <li><a href="#FaceDesolation" class="lnk-menu">Face Desolation</a></li>
+        <li><a href="#OutOfSupply" class="lnk-menu">Out of Supply</a></li> 
+        <li><a href="#FaceASetback" class="lnk-menu">Face a Setback</a></li>
+      </ul>
+    </li> 
+    <li class="lnk-menu quest" tabindex="5">
+      <div>Quest</div>
+      <ul>
+        <li><a href="#SwearAnIronVow" class="lnk-menu">Swear an Iron Vow</a></li>
+        <li><a href="#ReachAMilestone" class="lnk-menu">Reach a Milestone</a></li>
+        <li><a href="#FulfillYourVow" class="lnk-menu">Fulfill your Vow</a></li>
+        <li><a href="#ForsakeYourVow" class="lnk-menu">Forsake your Vow</a></li>
+        <li><a href="#Advance" class="lnk-menu">Advance</a></li>
+      </ul>
+    </li> 
+    <li class="lnk-menu fate" tabindex="6">
+      <div>Fate</div>
+      <ul>
+        <li><a href="#PayThePrice" class="lnk-menu">Pay the Price</a></li>
+        <li><a href="#AskTheOracle" class="lnk-menu">Ask the Oracle</a></li> 
+      </ul>
+    </li>
+  </ul>
 </nav>
+
 <div class="swipeView">
-  <article id="FaceDanger">
+  <article id="FaceDanger" class="adventure">
     <header id="AdventureMoves">
       <h1>
         Face Danger
@@ -73,7 +144,7 @@
 
     </section>
   </article>
-  <article id="SecureAnAdvantage">
+  <article id="SecureAnAdvantage" class="adventure">
     <header>
       <h1>
         Secure an Advantage
@@ -124,7 +195,7 @@
 
     </section>   
   </article>
-<article id="GatherInformation">
+<article id="GatherInformation" class="adventure">
   <header>
     <h1>
       Gather Information
@@ -150,7 +221,7 @@
    
   </section>
 </article>
-<article id="Heal">
+<article id="Heal" class="adventure">
   <header>
     <h1>
       Heal
@@ -177,7 +248,7 @@
   </section>
 </article>
   
-<article id="Resupply">
+<article id="Resupply" class="adventure">
   <header>
     <h1>
       Resupply
@@ -202,7 +273,7 @@
   </section>
 </article>
   
-<article id="MakeCamp">
+<article id="MakeCamp" class="adventure">
   <header>
     <h1>
       Make Camp
@@ -241,7 +312,7 @@
   </section>
 </article>
   
-<article id="UndertakeJourney">
+<article id="UndertakeJourney" class="adventure">
   <header>
     <h1>
       Undertake a Journey
@@ -293,7 +364,7 @@
     </p>
   </section>
 </article>
-<article id="ReachYourDestination">
+<article id="ReachYourDestination" class="adventure">
   <header>
     <h1>
       Reach Your Destination
@@ -327,7 +398,7 @@
 </article>
 
   
-  <article id="Compel">
+  <article id="Compel" class="relationship">
     <header id="RelationshipMoves">
       <h1>
         Compel
@@ -361,7 +432,7 @@
     </section>
   </article>
 
-<article id="Sojourn">
+<article id="Sojourn" class="relationship">
   <header>
     <h1>
       Sojourn
@@ -424,7 +495,7 @@
     
   </section>
 </article>
-<article id="DrawTheCircle">
+<article id="DrawTheCircle" class="relationship">
   <header>
     <h1>
       Draw the Circle
@@ -469,7 +540,7 @@
   </section>
 </article>
 
-<article id="ForgeABond">
+<article id="ForgeABond" class="relationship">
   <header>
     <h1>
       Forge a Bond
@@ -502,7 +573,7 @@
   </section>
 </article>	
 	
-<article id="TestYourBond">
+<article id="TestYourBond" class="relationship">
   <header>
     <h1>
       Test Your Bond
@@ -535,7 +606,7 @@
   </section>
 </article>
 
-<article id="AidYourAlly">
+<article id="AidYourAlly" class="relationship">
   <header>
     <h1>
       Aid Your Ally
@@ -551,7 +622,7 @@
   </section>
 </article>
 
-<article id="WriteYourEpilogue">
+<article id="WriteYourEpilogue" class="relationship">
   <header>
     <h1>
       Write Your Epilogue
@@ -576,7 +647,7 @@
   </section>
 </article>
 
-<article id="EnterTheFray">
+<article id="EnterTheFray" class="combat">
   <header id="CombatMoves">
     <h1>
       Enter the Fray
@@ -640,7 +711,7 @@
   </section>
 </article>
 
-<article id="Strike">
+<article id="Strike" class="combat">
   <header>
     <h1>
       Strike
@@ -665,7 +736,7 @@
   </section>
 </article>
 
-<article id="Clash">
+<article id="Clash" class="combat">
   <header>
     <h1>
       Clash
@@ -698,7 +769,7 @@
   </section>
 </article>
 
-<article id="TurnTheTide">
+<article id="TurnTheTide" class="combat">
   <header>
     <h1>
       Turn the Tide
@@ -717,7 +788,7 @@
   </section>
 </article>
 
-<article id="EndTheFight">
+<article id="EndTheFight" class="combat">
   <header>
     <h1>
       End the Fight
@@ -761,7 +832,7 @@
     </p>    
   </section>
 </article>
-<article id="Battle">
+<article id="Battle" class="combat">
   <header>
     <h1>
       Battle
@@ -803,7 +874,7 @@
   </section>
 </article>
 
-<article id="EndureHarm">
+<article id="EndureHarm" class="suffer">
   <header id="SufferMoves">
     <h1>
       Endure Harm
@@ -889,7 +960,7 @@
   </section>
 </article>
 	
-<article id="FaceDeath">
+<article id="FaceDeath" class="suffer">
   <header>
     <h1>
       Face Death
@@ -922,7 +993,7 @@
   </section>
 </article>
 	
-<article id="CompanionEndureHarm">
+<article id="CompanionEndureHarm" class="suffer">
   <header>
     <h1>
       Companion Endure Harm
@@ -953,7 +1024,7 @@
   </section>
 </article>	
 	
-<article id="EndureStress">
+<article id="EndureStress" class="suffer">
   <header>
     <h1>
       Endure Stress
@@ -1035,7 +1106,7 @@
   </section>
 </article>
 	
-<article id="FaceDesolation">
+<article id="FaceDesolation" class="suffer">
   <header>
     <h1>
       Face Desolation
@@ -1068,7 +1139,7 @@
   </section>
 </article>
 	
-<article id="OutOfSupply">
+<article id="OutOfSupply" class="suffer">
   <header>
     <h1>
       Out of Supply
@@ -1084,7 +1155,7 @@
   </section>
 </article>
 	
-<article id="FaceSetback">
+<article id="FaceSetback" class="suffer">
   <header>
     <h1>
       Face a Setback
@@ -1108,7 +1179,7 @@
   </section>
 </article>		
 
-<article id="SwearAnIronVow">
+<article id="SwearAnIronVow" class="quest">
   <header id="QuestMoves">
     <h1>
       Swear an Iron Vow
@@ -1141,7 +1212,7 @@
   </section>
 </article>
 
-<article id="ReachMilestone">
+<article id="ReachMilestone" class="quest">
   <header>
     <h1>
       Reach a Milestone
@@ -1176,7 +1247,7 @@
 
 <!--quest moves: fulfil-->
 
-<article id="FulfillYourVow">
+<article id="FulfillYourVow" class="quest">
   <header>
     <h1>
       Fulfill Your Vow
@@ -1209,7 +1280,7 @@
   </section>
 </article>
 
-<article id="ForsakeYourVow">
+<article id="ForsakeYourVow" class="quest">
   <header>
     <h1>
       Forsake Your Vow
@@ -1225,7 +1296,7 @@
   </section>
 </article>
 
-<article id="Advance">
+<article id="Advance" class="quest">
   <header>
     <h1>
       Advance
@@ -1241,7 +1312,7 @@
   </section>
 </article>
 
-<article id="PayThePrice">
+<article id="PayThePrice" class="fate">
   <header id="FateMoves">
     <h1>
       Pay the Price
@@ -1406,7 +1477,7 @@
   </section>
 </article>
 	
-<article id="AskTheOracle">
+<article id="AskTheOracle" class="fate">
   <header>
     <h1>
       Ask the Oracle
@@ -1491,7 +1562,8 @@
 
 </div>
 <footer>
-  This work is based on <strong><a href="https://www.ironswornrpg.com" target="officialSite">Ironsworn</a></strong>, created by Shawn Tomkin, and licensed for our use under the <a href="creativecommons.org/licenses/by-nc-sa/4.0/" target="license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license</a>.  
+  This work is based on <strong><a href="https://www.ironswornrpg.com" target="officialSite">Ironsworn</a></strong>, created by Shawn Tomkin, and licensed for our use under the <a href="https://creativecommons.org/licenses/by/4.0/" target="license">Creative Commons Attribution 4.0 International License</a>.
 </footer>
+
 </body>
 </html>
