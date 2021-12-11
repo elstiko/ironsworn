@@ -1,7 +1,229 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html, body {
+  overflow-x: hidden;
+}
+
+header#nav {
+  overflow: hidden;
+}
+header#nav h1 {
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+}
+
+/* Background hover animation. */
+
+nav h3:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #444;
+  background: rgba(244, 244, 244, .3);
+  transition: all 0.3s ease-out;
+}
+
+nav h3:hover:before,
+nav .dropArrow.active:before {
+  width: 2%;
+}
+
+nav .dropArrow span {
+  z-index: 2;
+  position: relative;
+}
+
+nav .dropArrow:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid #757575;
+  border-right: 2px solid #757575;
+  float: right;
+  position: relative;
+  top: 12px;
+  right: 25px;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+nav .dropArrow.active {
+  color: white;
+}
+
+nav .dropArrow.active:after {
+  transform: rotate(-135deg);
+  border-color: #fff;
+}
+
+ul#topLevel {
+  padding: 0;
+}
+
+
+
+
+
+/* +Hover and Touch effect */
+
+nav a:hover,
+nav a:active,
+nav h3:hover,
+nav h3:active,
+nav h3.dropArrow:hover:after,
+nav h3.dropArrow:active:after {
+  color: white;
+  border-color: #fff;
+  -webkit-transition: all 0.5s cubic-bezier(0.36, 1.64, 0.29, 0.88);
+  transition: all 0.5s cubic-bezier(0.36, 1.64, 0.29, 0.88);
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  transform: translate(0px, 0px);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+nav ul#topLevel>li {
+  font-size: 3em;
+}
+
+li.adventure,
+article.adventure header {
+  background-color: #119355;
+}
+li.relationship,
+article.relationship header {
+  background-color: #115a9d;
+}
+li.combat,
+article.combat header {
+  background-color: #d4272a;
+}
+li.suffer,
+article.suffer header {
+  background-color: #753a36;
+}
+li.quest,
+article.quest header {
+  background-color: #d67129;
+}
+li.fate,
+article.fate header {
+  background-color: #14b0d9;
+}
+
+
+/*Drop links*/
+
+nav ul ul li a {
+  padding: 0 0 0 2.5em;
+}
+
+
+/*hover effect on links*/
+
+nav ul ul li a:hover {
+  transform: translate(8px, 0px);
+}
+
+
+/*Hide and show the drops*/
+
+nav ul#topLevel>li ul {
+  display: none;
+}
+
+nav ul#topLevel>li:focus ul,
+nav ul#topLevel>li:focus-within ul {
+  display: block;
+}
+
+
+main {
+  padding: 30px;
+}
+main p {
+  margin-bottom: 20px;
+}
+
+.toggle-menu {
+  /* width: 40px;
+  height: 40px; */
+  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  right: 1em;
+  top: 1.5em;
+  padding: 0.5em;
+  background-color: black;
+  color: white;
+  border-radius: 0.5em;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 75vw;
+  height: 100%;
+  padding-top: 60px;
+  background: #369;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2) inset;
+}
+#menu .toggle-menu {
+  z-index: 3;
+}
+
+.lnk-menu {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 10px;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.lnk-menu:hover {
+  color: #BDBDBD;
+}
+
+#menu {
+  transform: translate3d(0, 0, 0) translateX(+75vw);
+  transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+}
+
+#menu:target {
+  transform: translate3d(0, 0, 0) translateX(0);
+}
+
+/* Legacy Code Follows */
+
 body {
   font-family: 'Merriweather', serif; 
 }
-a,
+/* a,
 a:link,
 a:hover,
 a:active,
@@ -19,7 +241,8 @@ nav a {
     color: white !important;
     flex: 1;
     text-transform: uppercase;
-}
+} */
+
 .swipeView {
   display: grid;
   grid-template-columns: repeat(35, 100%);
@@ -64,9 +287,9 @@ h2 {
   font-weight: 300;
 }
 
-li {
+/* li {
   font-size: 0.5em;
-}
+} */
 
 article a {
   font-style: italic;
