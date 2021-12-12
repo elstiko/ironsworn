@@ -19,7 +19,11 @@ header#nav h1 {
 
 /* Background hover animation. */
 
-nav h3:before {
+nav div {
+  padding: 10px 20px;
+}
+
+nav div:before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -32,20 +36,20 @@ nav h3:before {
   transition: all 0.3s ease-out;
 }
 
-nav h3:hover:before,
-nav .dropArrow.active:before {
+nav div:hover:before,
+nav ul#topLevel>li:focus div:before {
   width: 2%;
 }
 
-nav .dropArrow span {
+nav div span {
   z-index: 2;
   position: relative;
 }
 
-nav .dropArrow:after {
+nav div:after {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 0.5em;
+  height: 0.5em;
   border-bottom: 2px solid #757575;
   border-right: 2px solid #757575;
   float: right;
@@ -56,11 +60,15 @@ nav .dropArrow:after {
   transform-origin: center;
 }
 
-nav .dropArrow.active {
+nav ul#topLevel>li {
+  position: relative;
+}
+
+nav ul#topLevel>li:focus {
   color: white;
 }
 
-nav .dropArrow.active:after {
+nav ul#topLevel>li:focus div:after {
   transform: rotate(-135deg);
   border-color: #fff;
 }
@@ -77,10 +85,10 @@ ul#topLevel {
 
 nav a:hover,
 nav a:active,
-nav h3:hover,
-nav h3:active,
-nav h3.dropArrow:hover:after,
-nav h3.dropArrow:active:after {
+nav div:hover,
+nav div:active,
+nav div:hover:after,
+nav ul#topLevel>li:focus div:after {
   color: white;
   border-color: #fff;
   -webkit-transition: all 0.5s cubic-bezier(0.36, 1.64, 0.29, 0.88);
@@ -98,6 +106,8 @@ nav a {
 
 nav ul#topLevel>li {
   font-size: 3em;
+  display: flex;
+  flex-direction: column;
 }
 
 li.adventure,
@@ -129,7 +139,7 @@ article.fate header {
 /*Drop links*/
 
 nav ul ul li a {
-  padding: 0 0 0 2.5em;
+  padding: 0.25em 0 0.25em 1em;
 }
 
 
@@ -143,12 +153,14 @@ nav ul ul li a:hover {
 /*Hide and show the drops*/
 
 nav ul#topLevel>li ul {
-  display: none;
+  flex: 0 0 0em;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 nav ul#topLevel>li:focus ul,
 nav ul#topLevel>li:focus-within ul {
-  display: block;
+  flex: 1 0 13.5em;
 }
 
 
@@ -199,8 +211,6 @@ main p {
 .lnk-menu {
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 0 10px;
-  padding: 10px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
